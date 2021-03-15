@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.junit.Assert.assertTrue;
 
 public class SimpleTest {
@@ -13,7 +14,7 @@ public class SimpleTest {
     private WebDriver driver;
     @Before
     public void SetUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.edge.driver", "msedgedriver");
         driver = new ChromeDriver();
     }
     @After
@@ -37,8 +38,8 @@ public class SimpleTest {
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("#user-info-nl > a:nth-child(1)")).click();
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector("#frmLogin > div.generic.login_mobile > table > tbody > tr > td:nth-child(1) > input[type=text]:nth-child(3)")).sendKeys("Budova");
-        driver.findElement(By.cssSelector("#frmLogin > div.generic.login_mobile > table > tbody > tr > td:nth-child(1) > input[type=password]:nth-child(7)")).sendKeys("polyurethane");
+        driver.findElement(By.cssSelector("#frmLogin > div.generic.login_mobile > table > tbody > tr > td:nth-child(1) > input[type=text]:nth-child(3)")).sendKeys("Lt. Colombo");
+        driver.findElement(By.cssSelector("#frmLogin > div.generic.login_mobile > table > tbody > tr > td:nth-child(1) > input[type=password]:nth-child(7)")).sendKeys("pena");
         driver.findElement(By.cssSelector("#frmLogin > div.generic.login_mobile > table > tbody > tr > td:nth-child(1) > input[type=submit]:nth-child(11)")).click();
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("#main > tbody > tr:nth-child(2) > td.td_name > h3 > a")).click();
