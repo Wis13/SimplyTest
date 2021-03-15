@@ -24,7 +24,7 @@ public class SimpleTest {
 
     @Test
     public void getTitle() throws InterruptedException {
-        driver.get("https://www.pravda.com.ua/");
+        driver.get("https://www.prravda.com.ua/");
         Thread.sleep(2000);
         String title = driver.getTitle();
         assertTrue(title.contains("Українська правда"));
